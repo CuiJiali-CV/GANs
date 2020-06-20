@@ -62,43 +62,6 @@
 
 
 
-## Quick Start
-
-* Run train.py and the result will be stored in output
-* The hyper params are already set up in train.py.
-* The number of trainning images can be set up in loadData.py. Just simply change num to any number of images you want to train
-  <br /><br />
-
-## Version of Installment
-
-#### Tensorflow 1.13.1
-
-#### Numpy 1.18.2
-
-#### Python 3.6.9  
-
-<br /><br />
-
-## Structure of Network  
-
-* In fact, the leaky ReLu should switch place with BN, but that's it, LOL.
-* the code is correct, so don't worry about it.
-
-### Generator
-
- ![Image text](https://github.com/CuiJiali-CV/cGAN/raw/master/Generator.png)
-
-### Discriminator
-
-<br /><br />
- ![Image text](https://github.com/CuiJiali-CV/cGAN/raw/master/Discriminator.png)
-
-## Results
-
-<br /><br />
- ![Image text](https://github.com/CuiJiali-CV/cGAN/raw/master/Result.png)
-
-<br /><br />
 
 ## Author
 
