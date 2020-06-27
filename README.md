@@ -15,6 +15,7 @@
     </a>
 </p>
 
+# MoCoGAN
 
 [Paper Here](https://arxiv.org/abs/1707.04993)
 <br /><br />
