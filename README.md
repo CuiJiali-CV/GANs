@@ -15,6 +15,7 @@
     </a>
 </p>
 
+
 # MoCoGAN
 
 [Paper Here](https://arxiv.org/abs/1707.04993)
@@ -74,7 +75,52 @@
   - ![Image text](https://github.com/CuiJiali-CV/GANs/raw/master/imgs/mocogan/exp2.png)
   - ![Image text](https://github.com/CuiJiali-CV/GANs/raw/master/imgs/mocogan/exp3.png)
 
-  
+<br /><br />
+
+# TGAN
+
+[Paper Here](https://arxiv.org/pdf/1611.06624.pdf)
+
+<br /><br />
+
+## Process
+
+- ##### Overall
+
+  - ![Image text](https://github.com/CuiJiali-CV/GANs/raw/master/imgs/tgan/process.png)
+
+- ##### Details
+
+  - Let <img src="https://latex.codecogs.com/gif.latex?T>0" title="D_V" />be the number of frames to be generated, and <img src="https://latex.codecogs.com/gif.latex?G_0:R^{K_0&space;}\rightarrow&space;R^{T\times&space;K_1}" title="G_0:R^{K_0 }\rightarrow R^{T\times K_1}" /> be the temporal generator that gets another latent variable <img src="https://latex.codecogs.com/gif.latex?z_0&space;\in&space;R^{K_0}" title="z_0 \in R^{K_0}" /> as an argument and generates latent variables denoted as <img src="https://latex.codecogs.com/gif.latex?[z_1^1,&space;...,z_1^T]" title="[z_1^1, ...,z_1^T]" />.  <img src="https://latex.codecogs.com/gif.latex?z_0" title="D_V" /> is randomly drawn from a distribution <img src="https://latex.codecogs.com/gif.latex?p_{G_0(z_0)}" title="D_V" />.
+  - Next, image generator <img src="https://latex.codecogs.com/gif.latex?G_1:R^{K_0}\times&space;R^{K_1}\rightarrow&space;R^M" title="G_1:R^{K_0}\times R^{K_1}\rightarrow R^M" /> that yields a video from these latent variables.  Images generator takes both the latent variables generated from  <img src="https://latex.codecogs.com/gif.latex?G_0" title="D_V" /> as well as original latent variable <img src="https://latex.codecogs.com/gif.latex?z_0" title="D_V" /> as arguments.
+  - <img src="https://latex.codecogs.com/gif.latex?z_0" title="D_V" /> play a significant role in suppressing a sudden change of the action of the generated video
+
+- ##### Tricks
+
+  - Use WGAN for the instability problem in GANs. Moreover, it uses Singular Value Clipping to satisfy the K-Lipschitz constraint, which significantly stabilizes the training of the networks that have advanced structure.
+  - ![Image text](https://github.com/CuiJiali-CV/GANs/raw/master/imgs/tgan/Clip.png)
+
+- ##### Experiments
+
+  - The first one is to show the stability for using SVC on UCF-101
+
+  - ![Image text](https://github.com/CuiJiali-CV/GANs/raw/master/imgs/tgan/svc.png)
+
+  - ![Image text](https://github.com/CuiJiali-CV/GANs/raw/master/imgs/tgan/exp1.png)
+
+  - ![Image text](https://github.com/CuiJiali-CV/GANs/raw/master/imgs/tgan/exp2.png)
+
+  - ![Image text](https://github.com/CuiJiali-CV/GANs/raw/master/imgs/tgan/exp3.png)
+
+  - ![Image text](https://github.com/CuiJiali-CV/GANs/raw/master/imgs/tgan/exp4.png)
+
+  - ![Image text](https://github.com/CuiJiali-CV/GANs/raw/master/imgs/tgan/exp5.png)
+
+    
+
+
+
+
 
 
 
